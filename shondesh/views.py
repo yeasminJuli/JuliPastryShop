@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from shondesh.models Contract
+from shondesh.models import Contract
 # Create your views here.
 def deshboard(request):
     return render(request,'home.html')
