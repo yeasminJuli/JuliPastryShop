@@ -19,6 +19,6 @@ def contract(request):
         name = request.POST['name']
         email = request.POST['email']
         desc = request.POST['desc']
-        values = contract(name=name, email=email, desc=desc)
+        values = Contract(name=name, email=email, desc=desc)
         values.save()
     return render(request,'contract.html')
