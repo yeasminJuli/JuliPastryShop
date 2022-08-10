@@ -16,5 +16,9 @@ def about(request):
 
 def contract(request):
     if request.method=='POST':
-        print("this is post")
+        name = request.POST['name']
+        email = request.POST['email']
+        desc = request.POST['desc']
+        values = contract(name=name, email=email, desc=desc)
+        values.save()
     return render(request,'contract.html')
